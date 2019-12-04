@@ -1,0 +1,19 @@
+# Stages definition
+stages:
+  - build
+  - tests
+  - destroy
+  
+
+before_script:
+  - echo "this is script is excuted before"
+
+# Jobs definition
+build:
+  stage: build
+  script:
+    - echo "this is building your docker image"
+    - hostname
+  tags :
+    - ballo_new_runner
+
